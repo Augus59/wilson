@@ -1,0 +1,54 @@
+/* Establece la fuente y el color de fondo para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente a utilizar */
+    text-align: center; /* Centra el texto en el cuerpo */
+    background-color: #f0f0f0; /* Establece un color de fondo claro */
+}
+
+/* Establece el diseño de la galería */
+.galeria {
+    display: flex; /* Utiliza un diseño flexible para alinear los elementos en fila */
+    justify-content: center; /* Centra los elementos en la parte horizontal */
+    margin: 20px; /* Añade un margen de 20px alrededor de la galería */
+}
+
+/* Establece el contenedor para cada imagen */
+.foto {
+    position: relative; /* Permite posicionar elementos hijos de manera absoluta */
+    margin: 10px; /* Añade un margen de 10px entre las imágenes */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+}
+
+/* Establece el estilo de las imágenes */
+.foto img {
+    width: 500px; /* Define el ancho de la imagen */
+    height: 500px; /* Define la altura de la imagen */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Añade una transición suave para transformaciones y cambios de opacidad */
+}
+
+/* Establece el efecto de zoom y transparencia al pasar el ratón sobre la imagen */
+.foto:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% */
+    opacity: 0.7; /* Cambia la opacidad de la imagen a 0.7 (más transparente) */
+}
+
+/* Establece el estilo para los detalles de la imagen */
+.detalles {
+    position: absolute; /* Posiciona el elemento de detalles de forma absoluta dentro del contenedor .foto */
+    top: 0; /* Alinea el elemento en la parte superior */
+    left: 0; /* Alinea el elemento a la izquierda */
+    right: 0; /* Alinea el elemento a la derecha */
+    bottom: 0; /* Alinea el elemento en la parte inferior */
+    display: flex; /* Utiliza un diseño flexible para alinear el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    background-color: rgba(0, 0, 0, 0.7); /* Establece un fondo negro con 70% de opacidad */
+    color: white; /* Cambia el color del texto a blanco */
+    opacity: 0; /* Inicialmente establece la opacidad en 0 (invisible) */
+    transition: opacity 0.3s ease; /* Añade una transición suave para el cambio de opacidad */
+}
+
+/* Establece la visibilidad de los detalles al pasar el ratón sobre la imagen */
+.foto:hover .detalles {
+    opacity: 1; /* Cambia la opacidad a 1 (visible) al pasar el ratón */
+}
